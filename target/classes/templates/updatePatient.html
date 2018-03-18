@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Update Patient</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+</head>
+
+<body>
+
+<form th:action="@{/updatePatient}" th:method='POST'>
+<div id="content"  >
+
+    <h1>Update Patient</h1>
+
+        <p>
+                 <label for="name" class="name"> Name
+                 </label>
+                 <input type="text" name="name" id="name" placeholder="Search field" />
+                </p>
+
+                <p>
+                 <label for="cnp" class="cnp">CNP
+                 </label>
+                 <input type="text" name="cnp" id="cnp" placeholder="Search field" />
+                </p>
+        <p>
+            <label for="name1" class="name1"> Name
+            </label>
+            <input type="text" name="name1" id="name1" placeholder="Name" />
+        </p>
+
+        <p>
+            <label for="card1" class="card1">Card Number            </label>
+            <input type="text" name="card1" id="card1" placeholder="Card Number" />
+        </p>
+
+		<p>
+            <label for="cnp1" class="cnp1"> CNP</label>
+            <input type="text" name="cnp1" id="cnp1" placeholder="CNP"  />
+        </p>
+
+        <p>
+             <label for="date" class="date"> Date of birth</label>
+              <input type="date" name="date" id="date" 	placeholder="Date of birth" />
+        </p>
+
+	<p>
+             <label for="address" class="address"> Address</label>
+              <input type="text" name="address" id="address" 	placeholder="Address"  pattern="[0-9]*(\.)?[0-9]+"/>
+        </p>
+
+        <p>
+             <button type="submit" name="action" value="Update">Update</button>
+        </p>
+
+</div>
+</form>
+</body>
+</html>

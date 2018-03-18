@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+</head>
+<body>
+<div id="content">
+    <h1>Menu</h1>
+
+    <p>
+        <a th:href="@{/create}">
+        <button class='dotted thin'>Create</button>
+        </a>
+   	</p>
+
+    <p>
+        <a th:href="@{/view}">
+        <button class='dotted thin'>View</button>
+        </a>
+   	</p>
+
+    <p>
+        <a th:href="@{/update}">
+        <button class='dotted thin'>Update</button>
+        </a>
+   	</p>
+
+
+    <p>
+        <a th:href="@{/delete}">
+         <button class='dotted thin'>Delete</button>
+         </a>
+   	</p>
+
+   <p>
+   	    <a th:href="@{/logout}">
+        <button class='dotted thin'>Log Out</button>
+        </a>
+   </p>
+
+</div>
+</body>
+</html>

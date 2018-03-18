@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Delete Consultation</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+</head>
+
+<body>
+
+<form th:action="@{/deleteConsultation}"  th:method='POST'>
+<div id="content" >
+
+    <h1>Delete Consultation</h1>
+
+        <p>
+            <label for="numep" class="numep"> Patient's name
+            </label>
+            <input type="text" name="numep" id="numep" placeholder="Search field" required="required" />
+        </p>
+
+        <p>
+            <label for="date" class="date"> Consultation's date
+            </label>
+            <input type="date" name="date" id="date" placeholder="Search field" required="required"/>
+        </p>
+
+        <p>
+            <label for="oraI" class="oraI"> Consultation starts at
+            </label>
+            <input type="time" name="oraI" id="oraI" placeholder="Consultation starts at:HH:MM " required="required" />
+        </p>
+
+        <p>
+             <button type="submit" name="action" value="delete">Delete</button>
+        </p>
+
+</div>
+</form>
+</body>
+</html>

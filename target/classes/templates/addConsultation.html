@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Consultation</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+</head>
+
+<body>
+
+<div id="content">
+    <h1>Add Consultation</h1>
+
+    <form th:action="@{/addConsultation}"  th:method='POST'>
+    <!--<p>-->
+            <!--<label for="named" class="named"> Doctor's name-->
+            <!--</label>-->
+            <!--<input type="text" name="named" id="named" placeholder="Doctor's name" required="required"/>-->
+    <!--</p> -->
+    
+    <p>
+            <label for="namep" class="namep"> Patient's name
+            </label>
+            <input type="text" name="namep" id="namep" placeholder="Patient's name" required="required"/>
+    </p>
+
+    <p>
+            <label for="date" class="date"> Consultation starts at
+            </label>
+            <input type="date" name="date" id="date" placeholder="Date of consultation" required="required" />
+    </p>
+    <p>
+            <label for="oraI" class="oraI"> Consultation starts at
+            </label>
+            <input type="time" name="oraI" id="oraI" placeholder="Consultation starts at:HH:MM " required="required" />
+    </p>
+
+    <p>
+        <label for="oraS" class="oraS" >Consultation ends at
+        </label>
+        <input type="time" name="oraS" id="oraS" placeholder="Consultation ends at:HH:MM " />
+    </p>
+
+        <p>
+            <label for="comment" class="comment"> Comments
+            </label>
+            <input type="text" name="comment" id="comment" placeholder="Add a comment" required="required" />
+        </p>
+
+    <p>
+           <button type="submit" name="action" value="Add Consultation">Add Consultation</button>
+    </p>
+    </form>
+
+</div>
+
+</body>
+</html>

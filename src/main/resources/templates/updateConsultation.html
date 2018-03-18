@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Update Consultation</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+
+</head>
+
+<body>
+<form th:action="@{/updateConsultation}" th:method='POST'>
+<div id="content">
+    <h1>Update Consultation</h1>
+
+    <p>
+            <label for="name" class="name"> Patient's name
+            </label>
+            <input type="text" name="name" id="name" placeholder="Search field" required="required"/>
+    </p>
+
+    <p>
+        <label for="date" class="date"> Consultation's date
+        </label>
+        <input type="date" name="date" id="date" placeholder="Search field" required="required"/>
+    </p>
+
+    <p>
+        <label for="oraI" class="oraI"> Consultation starts at
+        </label>
+        <input type="time" name="oraI" id="oraI" placeholder="Consultation starts at:HH:MM " required="required" />
+    </p>
+
+    <p>
+        <label for="date1" class="date1"> New Date
+        </label>
+        <input type="date" name="date1" id="date1" placeholder="Date of consultation"/>
+    </p>
+    
+    <p>
+            <label for="oraI1" class="oraI1">Consultation starts at
+            </label>
+            <input type="time" name="oraI1" id="oraI1" placeholder="Consultation starts at:HH:MM" />
+    </p>
+    
+    <p>
+            <label for="oraS" class="oraS">Consultation ends at
+            </label>
+            <input type="time" name="oraS" id="oraS" placeholder="Consultation ends at:HH:MM" />
+    </p>
+
+    <p>
+           <button type="submit" name="action" value="Update">Update</button>
+    </p>
+
+</div>
+</form>
+</body>
+</html>

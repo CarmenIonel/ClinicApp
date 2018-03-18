@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    <title>Go to menu</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+</head>
+
+<body>
+<div id="content">
+    <h1>Welcome!</h1>
+		<p>
+            <div sec:authorize="hasRole('ROLE_ADMIN')">
+                    <a  th:href="@{/adminMeniu}">
+                    <button class='dotted thin'>Admin Menu</button>
+                    </a>
+            </div>
+
+            <div sec:authorize="hasRole'ROLE_DOCTOR')">
+                    <a  th:href="@{/doctorMeniu}">
+                    <button class='dotted thin'>Doctor Menu</button>
+                    </a>
+            </div>
+
+            <div sec:authorize="hasRole('ROLE_DOCTOR')">
+                <a  th:href="@{/secretaryMeniu}">
+                <button class='dotted thin'>Secretary Menu</button>
+                </a>
+            </div>
+        </p>
+</div>
+</body>
+</html>

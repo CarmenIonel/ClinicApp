@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>View Consultattions</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+</head>
+
+<body>
+
+<div id="content">
+    <h1>View Consultations</h1>
+
+    <form th:action="@{/viewComments}" th:method='POST'>
+        <p>
+            <label for="name" class="name"> Patient's name
+            </label>
+            <input type="text" name="name" id="name" placeholder="Search field"/>
+        </p>
+
+        <p>
+        <table class="table table-hover table-striped-rows table-bordered table-condensed">
+            <thead>
+            <tr>
+                <td><b>Doctor's name</b></td>
+            </tr>
+            </thead>
+            <tr th:each="listValue : ${consultation}">
+                <td class="text-left" th:text="${listValue.named}">Doctor's name</td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table class="table table-hover table-striped-rows table-bordered table-condensed">
+            <thead>
+            <tr>
+                <td><b>Date of consultation</b></td>
+            </tr>
+            </thead>
+            <tr th:each="listValue : ${consultation}">
+                <td class="text-left" th:text="${listValue.data}">Date of consultation</td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+        <table class="table table-hover table-striped-rows table-bordered table-condensed">
+            <thead>
+            <tr>
+                <td><b>Comment</b></td>
+            </tr>
+            </thead>
+            <tr th:each="listValue : ${consultation}">
+                <td class="text-left" th:text="${listValue.comments}">Comments</td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+            <button type="submit" name="action" value="View">View</button>
+        </p>
+
+    </form>
+
+    <p>
+
+        <a th:href="@{/doctorMeniu}">
+            <button class='dotted thin'>Back</button>
+        </a>
+
+    </p>
+</div>
+
+</body>
+</html>

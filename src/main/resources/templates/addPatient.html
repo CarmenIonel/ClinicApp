@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Create</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+</head>
+
+<body>
+<form th:action="@{/addPatient}" th:method='POST'>
+<div id="content">
+
+    <h1>Create Patient</h1>
+
+        <p>
+            <label for="name" class="name"> Name
+            </label>
+            <input type="text" name="name" id="name" placeholder="Name" required="required"/>
+        </p>
+
+        <p>
+            <label for="card" class="card">Card Number </label>
+            <input type="text" name="card" id="card" placeholder="Card Number" required="required"/>
+        </p>
+
+	<p>
+            <label for="cnp" class="cnp"> CNP</label>
+            <input type="text" name="cnp" id="cnp" placeholder="CNP" required="required" pattern="[0-9]{13}"/>
+        </p>
+
+        <p>
+            <label for="date" class="date"> Date of birth</label>
+            <input type="date" name="date" id="date" 	placeholder="Date of birth" required="required" />
+        </p>
+
+        <p>
+           <label for="address" class="address">Address</label>
+           <input type="text" name="address" id="address" 	placeholder="Addresss" required="required"/>
+        </p>
+
+        <p>
+              <button type="submit" name="action" value="Create">Create</button>
+        </p>
+
+</div>
+</form>
+</body>
+</html>

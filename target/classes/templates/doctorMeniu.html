@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/adminMeniu.css}" href="/css/adminMeniu.css"/>
+
+</head>
+
+<body>
+<div id="content">
+    <h1>Menu</h1>
+
+    <p>
+            <a th:href="@{/addComments}">
+            <button class='dotted thin'>Update Consultation</button>
+            </a>
+    </p>
+
+    <p>
+            <a th:href="@{viewComments}">
+            <button class='dotted thin'>View Consultation</button>
+            </a>
+    </p>
+
+
+    <p>
+       	    <a th:href="@{/logout}">
+            <button class='dotted thin'>Log Out</button>
+            </a>
+     </p>
+</div>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="/js/poll.js" ></script>
+
+</body>
+</html>
